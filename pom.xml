@@ -10,6 +10,7 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>r2dbc-original-quick-start</module>
         <module>r2dbc-quick-start</module>
     </modules>
 
