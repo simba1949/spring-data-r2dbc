@@ -9,18 +9,17 @@ import java.time.LocalDateTime;
 
 /**
  * @author anthony
- * @version 2024/2/19 9:16
+ * @version 2024/2/19 10:48
  */
 @Data
-@Table("user")
-public class UserEntity {
+@Table("permission")
+public class PermissionEntity {
 	/**
-	 * 假设每个用户只有一个角色信息
+	 * 主键
 	 */
-	private transient RoleEntity roleEntity;
-	
 	@Id
 	private Long id;
+	
 	/**
 	 * 业务编码
 	 */
@@ -28,76 +27,16 @@ public class UserEntity {
 	private String code;
 	
 	/**
-	 * 用户登录名
+	 * 权限描述名称
 	 */
-	@Column("username")
-	private String username;
+	@Column("name")
+	private String name;
 	
 	/**
-	 * 真实姓名
+	 * 权限URL
 	 */
-	@Column("real_name")
-	private String realName;
-	
-	/**
-	 * 用户昵称
-	 */
-	@Column("nick_name")
-	private String nickName;
-	
-	/**
-	 * 密码
-	 */
-	@Column("password")
-	private String password;
-	
-	/**
-	 * 性别，0表示女，1表示男
-	 */
-	@Column("gender")
-	private Byte gender;
-	
-	/**
-	 * 出生日期
-	 */
-	@Column("birthday")
-	private LocalDateTime birthday;
-	
-	/**
-	 * 民族
-	 */
-	@Column("nation")
-	private String nation;
-	
-	/**
-	 * 国家
-	 */
-	@Column("country_name")
-	private String countryName;
-	
-	/**
-	 * 身份证信息
-	 */
-	@Column("id_card")
-	private String idCard;
-	
-	/**
-	 * 地址
-	 */
-	@Column("address")
-	private String address;
-	
-	/**
-	 * 手机号码
-	 */
-	@Column("phone")
-	private String phone;
-	
-	/**
-	 * 邮件
-	 */
-	@Column("email")
-	private String email;
+	@Column("url")
+	private String url;
 	
 	/**
 	 * 是否启用，0表示否，1表示是

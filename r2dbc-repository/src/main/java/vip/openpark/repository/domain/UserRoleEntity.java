@@ -1,8 +1,6 @@
 package vip.openpark.repository.domain;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
@@ -13,9 +11,7 @@ import java.time.LocalDateTime;
  * @author anthony
  * @version 2024/2/19 9:27
  */
-@Getter
-@Setter
-@ToString
+@Data
 @Table("user_role")
 public class UserRoleEntity {
 	/**
