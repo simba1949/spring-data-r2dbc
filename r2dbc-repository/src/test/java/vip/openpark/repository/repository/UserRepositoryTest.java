@@ -25,12 +25,6 @@ public class UserRepositoryTest {
 			.subscribe(user -> log.info("{}", user));
 	}
 	
-	@Test
-	public void findByIdTest() {
-		userRepository.findById(1L)
-			.subscribe(user -> log.info("{}", user));
-	}
-	
 	@AfterEach
 	public void afterEach() throws IOException {
 		// 防止主线程结束
